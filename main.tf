@@ -3,14 +3,14 @@ terraform {
 }
 
 variable "environment" {
-  description = "Deployment environment used by the example application."
+  description = "Deployment environment used by the orders service."
   type        = string
-  default     = "demo"
+  default     = "production"
 }
 
 locals {
-  service_name = "vornik-security-demo"
-  endpoint     = "https://api.example.invalid"
+  service_name = "orders-api"
+  endpoint     = "https://api.orders.internal"
 }
 
 resource "terraform_data" "application" {
